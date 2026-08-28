@@ -7,11 +7,12 @@
   ],
   "seats": {
     "A": {
-      "state": "claimed",
+      "state": "filled",
       "model": "claude-fable-5",
       "family": "anthropic",
       "actor": "claude-fable-5@session",
-      "at": "2026-08-28T16:27:26Z"
+      "at": "2026-08-28T16:27:29Z",
+      "verdict": "PUBLISH"
     },
     "B": {
       "state": "open"
