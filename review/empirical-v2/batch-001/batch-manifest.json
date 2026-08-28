@@ -1,0 +1,39 @@
+{
+  "book_commit": "543845318a19511f95be912771367d3cdf1bc047",
+  "case_count": 20,
+  "condition_orders": [
+    [
+      "baseline",
+      "full_book"
+    ],
+    [
+      "full_book",
+      "baseline"
+    ],
+    [
+      "baseline",
+      "full_book"
+    ],
+    [
+      "full_book",
+      "baseline"
+    ],
+    [
+      "baseline",
+      "full_book"
+    ]
+  ],
+  "created_at": "2026-08-28T16:23:14.557750+00:00",
+  "evaluation": "the-borrowed-world-v2",
+  "fresh_session_per_case": true,
+  "model": "opencode/ling-3.0-flash-fin-free \u00b7 Ling 3.0 Flash Fin \u00b7 OpenCode 1.18.23 / OpenCode Zen",
+  "seeds": [
+    2026082801,
+    2026082802,
+    2026082803,
+    2026082804,
+    2026082805
+  ],
+  "tool_permission": "deny",
+  "treatment_sha256": "7cad8f4fcc4b385e673e98a4cebfc94b32db2dd82e84b01f37300e8681ced599"
+}

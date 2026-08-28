@@ -103,8 +103,9 @@ def invoke(opencode: Path, sandbox: Path, prompt: str, case_id: str) -> dict:
             completed = subprocess.run(
                 [
                     str(opencode), "run", "--pure", "--dir", str(sandbox),
-                    "--model", MODEL, prompt,
+                    "--model", MODEL,
                 ],
+                input=prompt,
                 text=True,
                 capture_output=True,
                 timeout=180,
@@ -120,17 +121,17 @@ def invoke(opencode: Path, sandbox: Path, prompt: str, case_id: str) -> dict:
                 "stderr": completed.stderr,
                 "transport_failure": completed.returncode != 0,
             }
-        except subprocess.TimeoutExpired as error:
+        except (subprocess.TimeoutExpired, OSError) as error:
             attempt = {
                 "attempt": attempt_number,
                 "started_at": started,
                 "finished_at": utc_now(),
                 "duration_seconds": round(time.monotonic() - start_clock, 3),
                 "returncode": None,
-                "stdout": error.stdout or "",
-                "stderr": error.stderr or "",
+                "stdout": getattr(error, "stdout", "") or "",
+                "stderr": getattr(error, "stderr", "") or str(error),
                 "transport_failure": True,
-                "timeout": True,
+                "timeout": isinstance(error, subprocess.TimeoutExpired),
             }
         attempts.append(attempt)
         if not attempt["transport_failure"]:
@@ -164,10 +165,19 @@ def run_condition(
         )
 
     records: dict[str, dict] = {}
+    pending: list[str] = []
+    for case_id in order:
+        record_path = condition_dir / f"{case_id}.json"
+        if record_path.is_file():
+            records[case_id] = json.loads(record_path.read_text(encoding="utf-8"))
+            print(f"run {run_number} {condition} {case_id}: preserved existing record",
+                  flush=True)
+        else:
+            pending.append(case_id)
     with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as pool:
         futures = {
             pool.submit(invoke, opencode, sandbox, prompts[case_id], case_id): case_id
-            for case_id in order
+            for case_id in pending
         }
         for future in concurrent.futures.as_completed(futures):
             case_id = futures[future]
@@ -327,18 +337,20 @@ def main() -> int:
     treatment = treatment_text(args.book, manifest)
     args.output.mkdir(parents=True, exist_ok=True)
     args.output.joinpath("treatment.sha256").write_text(sha256(treatment) + "\n", encoding="utf-8")
-    args.output.joinpath("batch-manifest.json").write_text(json.dumps({
-        "created_at": utc_now(),
-        "book_commit": "543845318a19511f95be912771367d3cdf1bc047",
-        "evaluation": "the-borrowed-world-v2",
-        "model": MODEL_IDENTITY,
-        "seeds": SEEDS,
-        "condition_orders": CONDITION_ORDERS,
-        "case_count": len(cases),
-        "treatment_sha256": sha256(treatment),
-        "tool_permission": "deny",
-        "fresh_session_per_case": True,
-    }, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    batch_manifest_path = args.output / "batch-manifest.json"
+    if not batch_manifest_path.exists():
+        batch_manifest_path.write_text(json.dumps({
+            "created_at": utc_now(),
+            "book_commit": "543845318a19511f95be912771367d3cdf1bc047",
+            "evaluation": "the-borrowed-world-v2",
+            "model": MODEL_IDENTITY,
+            "seeds": SEEDS,
+            "condition_orders": CONDITION_ORDERS,
+            "case_count": len(cases),
+            "treatment_sha256": sha256(treatment),
+            "tool_permission": "deny",
+            "fresh_session_per_case": True,
+        }, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
     complete = True
     with tempfile.TemporaryDirectory(prefix="oailly-reader-empty-") as empty:

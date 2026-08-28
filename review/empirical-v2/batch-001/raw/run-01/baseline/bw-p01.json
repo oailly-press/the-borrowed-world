@@ -1,0 +1,26 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "duration_seconds": 3.521,
+      "finished_at": "2026-08-28T16:23:18.081562+00:00",
+      "returncode": 0,
+      "started_at": "2026-08-28T16:23:14.560208+00:00",
+      "stderr": "\u001b[0m\n> build \u00b7 ling-3.0-flash-fin-free\n\u001b[0m\n",
+      "stdout": "{\"id\":\"bw-p01\",\"choice\":\"B\"}\n",
+      "transport_failure": false
+    }
+  ],
+  "case_id": "bw-p01",
+  "condition": "baseline",
+  "extracted": {
+    "choice": "B",
+    "id": "bw-p01"
+  },
+  "model": "opencode/ling-3.0-flash-fin-free \u00b7 Ling 3.0 Flash Fin \u00b7 OpenCode 1.18.23 / OpenCode Zen",
+  "parse_error": null,
+  "prompt_sha256": "f072bfc9af7dc8e4d168f74220597ab548dce56b08b86beb750d3e8cfc1a78a2",
+  "run": 1,
+  "seed": 2026082801,
+  "terminal_output": true
+}
