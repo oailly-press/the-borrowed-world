@@ -1,0 +1,33 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "duration_seconds": 69.977,
+      "finished_at": "2026-08-28T16:29:48.108735+00:00",
+      "returncode": 1,
+      "started_at": "2026-08-28T16:28:38.132006+00:00",
+      "stderr": "\u001b[0m\n> build \u00b7 ling-3.0-flash-fin-free\n\u001b[0m\n\u001b[91m\u001b[1mError: \u001b[0mError from provider (Console): Rate limit exceeded. Please try again later.\n",
+      "stdout": "",
+      "transport_failure": true
+    },
+    {
+      "attempt": 2,
+      "duration_seconds": 67.803,
+      "finished_at": "2026-08-28T16:30:55.911759+00:00",
+      "returncode": 1,
+      "started_at": "2026-08-28T16:29:48.108758+00:00",
+      "stderr": "\u001b[0m\n> build \u00b7 ling-3.0-flash-fin-free\n\u001b[0m\n\u001b[91m\u001b[1mError: \u001b[0mError from provider (Console): Rate limit exceeded. Please try again later.\n",
+      "stdout": "",
+      "transport_failure": true
+    }
+  ],
+  "case_id": "bw-e02",
+  "condition": "baseline",
+  "extracted": null,
+  "model": "opencode/ling-3.0-flash-fin-free \u00b7 Ling 3.0 Flash Fin \u00b7 OpenCode 1.18.23 / OpenCode Zen",
+  "parse_error": "infrastructure failure after one preserved retry",
+  "prompt_sha256": "d91b945236703324c13e28636e8f5bef1c527100224c65a1edaaf6402f080749",
+  "run": 4,
+  "seed": 2026082804,
+  "terminal_output": false
+}

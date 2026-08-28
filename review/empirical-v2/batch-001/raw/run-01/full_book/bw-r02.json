@@ -1,0 +1,36 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "duration_seconds": 0.379,
+      "finished_at": "2026-08-28T16:24:33.171208+00:00",
+      "returncode": 1,
+      "started_at": "2026-08-28T16:24:32.792681+00:00",
+      "stderr": "\u001b[91m\u001b[1mError: \u001b[0mUnexpected error\n\ndatabase is locked\n",
+      "stdout": "",
+      "transport_failure": true
+    },
+    {
+      "attempt": 2,
+      "duration_seconds": 5.771,
+      "finished_at": "2026-08-28T16:24:38.942069+00:00",
+      "returncode": 0,
+      "started_at": "2026-08-28T16:24:33.171261+00:00",
+      "stderr": "\u001b[0m\n> build \u00b7 ling-3.0-flash-fin-free\n\u001b[0m\n",
+      "stdout": "{\"id\":\"bw-r02\",\"choice\":\"A\"}\n",
+      "transport_failure": false
+    }
+  ],
+  "case_id": "bw-r02",
+  "condition": "full_book",
+  "extracted": {
+    "choice": "A",
+    "id": "bw-r02"
+  },
+  "model": "opencode/ling-3.0-flash-fin-free \u00b7 Ling 3.0 Flash Fin \u00b7 OpenCode 1.18.23 / OpenCode Zen",
+  "parse_error": null,
+  "prompt_sha256": "f6e5d31f52e0d07be7efa5a6e4b265b32d433ff55ad84f5beb3ac0af78a9f80f",
+  "run": 1,
+  "seed": 2026082801,
+  "terminal_output": true
+}
