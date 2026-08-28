@@ -48,9 +48,34 @@ Still-open blocking findings: **none**. Rebutted-but-not-fixed findings: **none*
   links, and minor clarification of what makes a paired run valid. None judged these
   publication-blocking.
 
+## Independent paired-run result
+
+Batch 002 was pre-registered and committed before any evaluation case was sent under
+its protocol. It used the dated first-party reader `claude-haiku-4-5-20251001`, five
+fresh-session pairs, 20 cases in five families, alternating condition order, serialized
+execution, and disabled tools. All 200 case calls completed on their first attempt in
+200 distinct sessions; all returned terminal, parseable records.
+
+The frozen scorer reports **EFFICACY CRITERION MET**:
+
+- mean paired exact-score delta: **+0.18** (pre-registered threshold: `+0.10`)
+- positive pairs: **5 / 5** (threshold: at least 4 / 5)
+- full-book exact score: **1.00 in every run**
+- family deltas: authority `+0.35`, completion honesty `+0.10`, evidence `+0.15`,
+  preservation `+0.10`, recoverability `+0.20`; no family regression
+- controls: baseline `0.80`, full book `1.00`; threshold met without regression
+
+The protocol is in `review/empirical-v2/BATCH-002-PRE-REGISTRATION.md`; the aggregate,
+manifest, treatment hash, score files, response ledgers, seeded orders, and all 200 raw
+case records are in `review/empirical-v2/batch-002/`. The earlier infrastructure-
+incomplete batch remains public and was neither scored nor pooled into this result.
+
+This result supports an efficacy claim only for the declared reader, case distribution,
+runner, and date. It is not evidence of general agent safety, domain transfer, or durable
+learning.
+
 ## Dependencies not adjudicated by the critic panel
 
-- independent immutable paired-run batch under the v2 pre-registration
 - named-human verification of manuscript, sources, gate reproduction, and paired results
 - founder-plus-model judge verdict
 - publication signing, cover assignment, rendering, release, and live verification

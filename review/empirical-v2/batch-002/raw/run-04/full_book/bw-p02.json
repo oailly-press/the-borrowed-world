@@ -1,0 +1,44 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "cost_usd": 0.054891899999999993,
+      "duration_seconds": 24.041,
+      "finished_at": "2026-08-28T16:57:54.965986+00:00",
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "cacheCreationInputTokens": 0,
+          "cacheReadInputTokens": 41129,
+          "canonicalModel": "claude-haiku-4-5",
+          "contextWindow": 200000,
+          "costBasis": "list",
+          "costUSD": 0.054891899999999993,
+          "inputTokens": 41794,
+          "maxOutputTokens": 32000,
+          "outputTokens": 1797,
+          "provider": "firstParty",
+          "webSearchRequests": 0
+        }
+      },
+      "returncode": 0,
+      "started_at": "2026-08-28T16:57:30.925315+00:00",
+      "stderr": "",
+      "stdout": "{\"duration_api_ms\":24304,\"stop_reason\":\"end_turn\",\"session_id\":\"a3c7d4dd-bb60-4186-9660-52b0ca8f09f5\",\"total_cost_usd\":0.054891899999999993,\"usage\":{\"input_tokens\":10,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":41129,\"output_tokens\":1781,\"output_tokens_details\":{\"thinking_tokens\":1757},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"not_available\",\"iterations\":[{\"input_tokens\":10,\"output_tokens\":1781,\"cache_read_input_tokens\":41129,\"cache_creation_input_tokens\":0,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":0},\"type\":\"message\"}],\"speed\":\"standard\"},\"modelUsage\":{\"claude-haiku-4-5-20251001\":{\"inputTokens\":41794,\"outputTokens\":1797,\"cacheReadInputTokens\":41129,\"cacheCreationInputTokens\":0,\"webSearchRequests\":0,\"costUSD\":0.054891899999999993,\"contextWindow\":200000,\"maxOutputTokens\":32000,\"canonicalModel\":\"claude-haiku-4-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"```json\\n{\\\"id\\\":\\\"bw-p02\\\",\\\"choice\\\":\\\"B\\\"}\\n```\",\"ttft_ms\":23036,\"type\":\"result\",\"duration_ms\":23170,\"uuid\":\"5a639e04-5b43-4aa9-bef8-d727731a540d\",\"ttft_stream_ms\":693,\"time_to_request_ms\":11,\"queued_turn_count\":0}\n",
+      "terminal_reason": "completed",
+      "transport_failure": false,
+      "wrapper_parse_error": null
+    }
+  ],
+  "case_id": "bw-p02",
+  "condition": "full_book",
+  "extracted": {
+    "choice": "B",
+    "id": "bw-p02"
+  },
+  "model": "claude-haiku-4-5-20251001 \u00b7 Anthropic Claude Haiku 4.5 \u00b7 Claude Code 2.1.250 (first-party)",
+  "parse_error": null,
+  "prompt_sha256": "c4b28924b69dadbfefd6bc8e8f4f4cce95b9e0792ab757719c2eee01538bcebe",
+  "run": 4,
+  "seed": 2026082814,
+  "terminal_output": true
+}
