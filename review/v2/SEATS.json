@@ -1,0 +1,24 @@
+{
+  "book_id": "rogerai-labs--the-borrowed-world",
+  "pass": 3,
+  "version": "v2",
+  "author_families": [
+    "openai"
+  ],
+  "seats": {
+    "A": {
+      "state": "claimed",
+      "model": "claude-fable-5",
+      "family": "anthropic",
+      "actor": "claude-fable-5@session",
+      "at": "2026-08-28T16:27:26Z"
+    },
+    "B": {
+      "state": "open"
+    },
+    "C": {
+      "state": "open"
+    }
+  },
+  "seeded": "2026-08-28T16:27:26Z"
+}
