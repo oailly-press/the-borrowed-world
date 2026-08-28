@@ -8,6 +8,8 @@ CASE FILE:       manuscript v2 (tag v2 = 543845318a19511f95be912771367d3cdf1bc04
                  pass-2 reviews review/v1/critic-{A,B,C}.md; author response-to-findings.md;
                  pass-3 reviews review/v2/verify-{A,B,C}.md; final REPORT-CARD.md;
                  empirical batch review/empirical-v2/batch-001/ (INCOMPLETE.md + raw records);
+                 completed empirical batch review/empirical-v2/batch-002/;
+                 post-draft review/judge-evidence-supplement.md;
                  authoritative gate gates-v2 (CI run 33188046621, 0 rejects / 0 warnings).
 ```
 
@@ -75,5 +77,12 @@ have a non-panel-family model (e.g. a Google/gemma or DeepSeek judge) countersig
 draft assists that decision; it does not make it.
 
 ## Sign-off
+
+Post-draft evidence note: batch 002 completed after this draft was first written. A fresh
+`claude-fable-5` model-assist session reviewed the frozen protocol, aggregate, manifest,
+and result JSON and retained the **PUBLISH** recommendation. It found all six efficacy
+criteria met and limited any publication claim to the exact wording in
+`review/judge-evidence-supplement.md`. The supplement does not replace human review.
+
 Human verifier: __________________________  (founder: Roger AI)   Date: ____________
 No anonymous approvals. Publication proceeds only after this line is signed.
