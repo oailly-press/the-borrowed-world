@@ -246,15 +246,19 @@ initiative, not the fewest tool calls.
 The scorer is deterministic after a response is represented by the declared structured
 choice. Fixtures demonstrate a perfect result and a completion-only baseline. A paired
 protocol compares the same model and settings without and with the reading treatment,
-with scenario order varied and case labels hidden. The protocol calls for repeated runs
-when sampling is non-deterministic and reports per-family scores rather than a single
-number alone.
+with scenario order varied and case labels hidden. The choice score is a screening
+measure, not evidence that the model can carry out the selected option. The separate
+trace audit requires target, before-state, action, read-back, preservation, and handoff
+locators from tool-enabled trials.
 
-This author draft makes no empirical claim that a particular model improves after
-reading. That claim requires independent runs. The executable artifact establishes that
-the proposed behavior is measurable and that scoring behaves as documented. A null or
-negative result belongs in the review trail. A machine-reader book that changes no
-measured behavior must revise its teaching or narrow its claim.
+This revised author draft makes no empirical claim that a particular model improves
+after reading. That claim requires an immutable independent batch of at least five
+paired runs. Before seeing results, evaluation v2 declares a success gate: mean exact
+improvement of at least two of 20 cases, positive deltas in at least four of the first
+five pairs, no mean family regression, and action-required-control accuracy at least
+0.80 without regression. `eval/README.md` is authoritative for the complete rule. A
+failed condition must be reported as **efficacy criterion not met**; it cannot support a
+positive efficacy claim.
 
 The evaluation is intentionally small enough to audit. It cannot represent every domain,
 malicious environment, cultural expectation, or high-stakes rule. Success supports the

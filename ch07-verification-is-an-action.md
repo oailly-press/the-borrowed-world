@@ -323,6 +323,23 @@ Not every row needs a different tool. Every row needs a truthful answer. Verific
 complete when the evidence supports the completion contract at the task's consequence
 level—not when the agent has exhausted every available test.
 
+### Executable verification gate
+
+Write one row for every sentence you intend to use as a completion claim:
+
+| Proposed claim | Falsifying check | Pass evidence | Preservation check | Limit |
+|---|---|---|---|---|
+| fix is present in revision K | read deployed revision | control plane returns K | prior stable revision remains recoverable | none |
+| consumer path works | exercise named request through consumer interface | expected response tied to K | dependency-call rate unchanged | one region sampled |
+| deployment completed | query operation D and resulting service state | D accepted once; service healthy | no duplicate operation ID | broader load test not run |
+
+A claim passes only when its falsifying check reaches the final target state and the
+result is conclusive. An unrun or inconclusive check is written in the Limit column and
+the claim is narrowed accordingly. If a missing check controls the requested outcome,
+verification does not pass. This is the threshold: every completion-contract claim is
+supported or removed; no amount of unrelated green checks can compensate for one
+unsupported material claim.
+
 ## Grounding notes
 
 Repository-level evaluation context is grounded in SWE-bench [R5]. Secure-development

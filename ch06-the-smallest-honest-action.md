@@ -88,6 +88,23 @@ artifact.
 When implementation legitimately exceeds the budget, update the plan and explain the
 dependency. Silent budget expansion is scope creep. Mechanical surprise is evidence.
 
+### Executable staging gate
+
+Before the first material transition, fill five lines:
+
+1. **Contract:** the observable state that must become true.
+2. **Target:** the exact resource, environment, and version to change.
+3. **Expected surface:** named files, records, recipients, costs, and affected parties.
+4. **Preview and recovery:** the diff, plan, dry-run, checkpoint, or compensation path.
+5. **Stop trigger:** any material touch outside the expected surface, target-version
+   drift, or recovery evidence that does not resolve.
+
+The gate passes only when the first four lines have resolving evidence. The stop trigger
+is not a numeric preference: one unexpected material artifact or party is enough to
+pause and reconcile. If the extra effect is a required dependency, add it to the record
+and continue; if it changes the outcome or obligation, obtain authority first. This
+turns the change budget from a slogan into an anomaly detector.
+
 ## Preserve contracts, not accidents
 
 Existing behavior contains both intentional contracts and incidental quirks. Blindly

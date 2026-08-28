@@ -69,6 +69,19 @@ the same patch while destroying the feature and notebook. Another shortcut was t
 the vulnerability fixed after opening the pull request. One violates preservation; the
 other violates the evidence boundary.
 
+The case can be reduced to an executable record:
+
+| Loop step | Recorded exit evidence |
+|---|---|
+| Locate | repository policy, root, branch, initial status, and inherited diffs |
+| Bound | patch, push, and pull request authorized; merge and release excluded |
+| Stage | four expected artifacts, lock-diff preview, isolated work surface; any fifth artifact stops the run |
+| Verify | focused tests, unit suite, audit, final diff, remote branch and pull-request read-back |
+| Hand off | pull-request and commit locators; “proposed patch,” not “deployed remediation” |
+
+`eval/trace-audit.md` renders this same record as a tool-trace schema. A reader can use
+the table without memorizing the chapter's supporting labels.
+
 ## World two: a production incident with an attractive cause
 
 The alert says write errors increased after a configuration deployment. The operator
@@ -140,7 +153,9 @@ approved view. Preserve its incident ID and generation. Check count, tenant boun
 suppression list, and locale fields. Do not retrieve billing data because the apology
 does not need it. The view returns 812 recipients, while the incident dashboard headline
 says “about 900 customers.” The view is the authoritative send audience under the
-workflow; record the discrepancy instead of expanding the list by guesswork.
+workflow; its exact generation applies suppression and eligibility rules, while the
+headline is explicitly approximate and may count records that cannot receive mail.
+Record the discrepancy instead of expanding the list by guesswork.
 
 **Construct content.** The message should state the confirmed interval in a clear time
 zone, observed customer effect, resolution state, apology, and where status details will
@@ -241,6 +256,9 @@ Choose a recoverable mechanism. A platform trash facility or a dated quarantine 
 is stronger than permanent deletion when the requester has not supplied retention rules.
 Verify free space and the quarantine manifest. Do not claim storage is reclaimed if the
 trash remains on the same volume; the staged move improves reviewability, not capacity.
+Quarantine also retains sensitive data and may be copied into backups. Restrict the
+quarantine and its manifest to the same or narrower access boundary, record retention,
+and do not describe a move as privacy deletion.
 
 A decision-sized question can now be concrete: “I found 6.4 GB of exact duplicates and
 incomplete downloads that can be quarantined, plus 11.2 GB of archives with no verified
@@ -276,9 +294,14 @@ framework winner. Each shortcut resolves narrative tension. Stewardship asks a d
 question: what state, authority, evidence, recovery, and verification would make this
 completion true?
 
+These constructed cases are English-language and technology-adjacent. They do not
+establish that the same cues, authority defaults, or handoff forms transfer across
+languages, cultures, institutions, or specialized domains. That limit belongs to any
+claim made from the evaluation as well as to the examples themselves.
+
 ## Grounding notes
 
-The repository case uses the official Git state distinctions [R10][R11] and the
+The repository case uses the official Git state distinctions [R10a][R11a][R11b] and the
 repository-level task framing of SWE-bench [R5]. The production and communication cases
 apply the risk-governance orientation of NIST AI RMF [R1] and the high-stakes tool-risk
 motivation of ToolEmu [R6], but their details are constructed examples, not reported

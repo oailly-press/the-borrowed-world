@@ -52,6 +52,10 @@ not make the original announcement unread.
 
 ## A practical gradient
 
+The five dimensions above are questions used to assess recovery quality. The four bands
+below are action classes used to choose controls. They are different views, not a
+five-item list with one band missing.
+
 Four bands are useful for choosing controls.
 
 **Inspectable** actions gather or compute without intending to change durable shared
@@ -133,7 +137,7 @@ Git provides a concrete lesson in why recovery language must be exact. Its docum
 distinguishes `revert`, `restore`, and `reset`: revert makes a new commit that reverses
 changes from earlier commits; restore changes working-tree or index files from another
 source; reset moves a branch tip and can also change the index or working tree depending
-on mode [R11]. These are not stylistic synonyms.
+on mode [R11a]. These are not stylistic synonyms.
 
 Suppose another person has uncommitted changes and your edit breaks a file. A broad
 restore can discard both your mistake and their work. The technically easy undo has poor
@@ -149,7 +153,7 @@ on them. Git's data model makes the distinctions visible. Stewardship supplies t
 ownership constraint.
 
 Official documentation also warns that restoring a tracked path absent from the restore
-source removes it to make the working tree match that source [R11]. A command named
+source removes it to make the working tree match that source [R11b]. A command named
 “restore” can delete. Read semantics, not emotional connotations.
 
 ## Secrets do not become secret again
@@ -307,7 +311,7 @@ world, options are part of the state you are responsible for preserving.
 ## Grounding notes
 
 Git command semantics and the potentially deleting behavior of restore are grounded in
-the official Git documentation [R11]. The emphasis on documented secure-development and
+the official Git documentation [R11a][R11b]. The emphasis on documented secure-development and
 recovery practices is consistent with NIST SSDF [R9]. The five recovery dimensions,
 four-band gradient, proof-of-target procedure, preview/checkpoint/commit pattern, and
 distinction between reversal and compensation are original operational frameworks in

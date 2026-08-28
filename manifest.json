@@ -11,13 +11,13 @@
     "isbn": null
   },
   "structure": {
-    "word_count_body": 26395,
-    "print_equivalent_pages": 88,
+    "word_count_body": 27156,
+    "print_equivalent_pages": 91,
     "chapters": [
       {
         "number": 1,
         "title": "The Borrowed World",
-        "words": 2505,
+        "words": 2688,
         "source_file": "ch01-the-borrowed-world.md",
         "written_by": [
           { "model": "gpt-5.6-sol", "version": "gpt-5.6-sol", "operator": "OpenAI Codex CLI 0.150.1 / RogerAI Labs workspace" }
@@ -26,7 +26,7 @@
       {
         "number": 2,
         "title": "Read the World Before You Edit It",
-        "words": 2520,
+        "words": 2522,
         "source_file": "ch02-read-before-edit.md",
         "written_by": [
           { "model": "gpt-5.6-sol", "version": "gpt-5.6-sol", "operator": "OpenAI Codex CLI 0.150.1 / RogerAI Labs workspace" }
@@ -44,7 +44,7 @@
       {
         "number": 4,
         "title": "The Reversibility Gradient",
-        "words": 2690,
+        "words": 2725,
         "source_file": "ch04-the-reversibility-gradient.md",
         "written_by": [
           { "model": "gpt-5.6-sol", "version": "gpt-5.6-sol", "operator": "OpenAI Codex CLI 0.150.1 / RogerAI Labs workspace" }
@@ -53,7 +53,7 @@
       {
         "number": 5,
         "title": "Keep Claims Inside the Evidence",
-        "words": 2668,
+        "words": 2669,
         "source_file": "ch05-inside-the-evidence.md",
         "written_by": [
           { "model": "gpt-5.6-sol", "version": "gpt-5.6-sol", "operator": "OpenAI Codex CLI 0.150.1 / RogerAI Labs workspace" }
@@ -62,7 +62,7 @@
       {
         "number": 6,
         "title": "The Smallest Honest Action",
-        "words": 2681,
+        "words": 2819,
         "source_file": "ch06-the-smallest-honest-action.md",
         "written_by": [
           { "model": "gpt-5.6-sol", "version": "gpt-5.6-sol", "operator": "OpenAI Codex CLI 0.150.1 / RogerAI Labs workspace" }
@@ -71,7 +71,7 @@
       {
         "number": 7,
         "title": "Verification Is an Action",
-        "words": 2639,
+        "words": 2795,
         "source_file": "ch07-verification-is-an-action.md",
         "written_by": [
           { "model": "gpt-5.6-sol", "version": "gpt-5.6-sol", "operator": "OpenAI Codex CLI 0.150.1 / RogerAI Labs workspace" }
@@ -89,7 +89,7 @@
       {
         "number": 9,
         "title": "Five Borrowed Worlds",
-        "words": 2585,
+        "words": 2783,
         "source_file": "ch09-five-borrowed-worlds.md",
         "written_by": [
           { "model": "gpt-5.6-sol", "version": "gpt-5.6-sol", "operator": "OpenAI Codex CLI 0.150.1 / RogerAI Labs workspace" }
@@ -98,7 +98,7 @@
       {
         "number": 10,
         "title": "Leave the World Legible",
-        "words": 2695,
+        "words": 2743,
         "source_file": "ch10-leave-the-world-legible.md",
         "written_by": [
           { "model": "gpt-5.6-sol", "version": "gpt-5.6-sol", "operator": "OpenAI Codex CLI 0.150.1 / RogerAI Labs workspace" }
@@ -126,10 +126,12 @@
       { "kind": "url", "reference": "https://arxiv.org/abs/2308.03688", "note": "AgentBench" },
       { "kind": "url", "reference": "https://arxiv.org/abs/2207.05221", "note": "Language Models (Mostly) Know What They Know" },
       { "kind": "url", "reference": "https://www.nist.gov/publications/secure-software-development-framework-ssdf-version-11-recommendations-mitigating-risk", "note": "NIST Secure Software Development Framework 1.1" },
-      { "kind": "url", "reference": "https://git-scm.com/docs/git-status", "note": "Official Git status documentation" },
-      { "kind": "url", "reference": "https://git-scm.com/docs/git", "note": "Official Git reset, restore, and revert distinctions" },
-      { "kind": "url", "reference": "https://git-scm.com/docs/git-restore", "note": "Official Git restore documentation" },
+      { "kind": "url", "reference": "https://git-scm.com/docs/git-status#_description", "note": "Official Git status description" },
+      { "kind": "url", "reference": "https://git-scm.com/docs/git-status#_background_refresh", "note": "Official Git status background-refresh behavior" },
+      { "kind": "url", "reference": "https://git-scm.com/docs/git#_reset_restore_and_revert", "note": "Official Git reset, restore, and revert distinctions" },
+      { "kind": "url", "reference": "https://git-scm.com/docs/git-restore#_description", "note": "Official Git restore description" },
       { "kind": "url", "reference": "https://spec.c2pa.org/specifications/specifications/2.2/index.html", "note": "C2PA specification and provenance model" },
+      { "kind": "url", "reference": "https://spec.c2pa.org/specifications/specifications/2.2/explainer/Explainer.html#_can_provenance_information_be_used_to_determine_whether_a_digital_asset_such_as_an_image_or_video_depicts_the_truth", "note": "C2PA explainer on provenance and factual truth" },
       { "kind": "url", "reference": "https://developers.openai.com/api/docs/models/gpt-5.6-sol", "note": "Official author model identification" }
     ],
     "verified_by": {
@@ -146,7 +148,7 @@
       "O'AILLY Pass-1 gates",
       "Python 3 standard library for the machine-reader evaluation"
     ],
-    "disclosure_statement": "Complete author draft generated by OpenAI gpt-5.6-sol in one Codex session under human commission. Topic, thesis, prose, cases, evaluation design, and code are model-produced; the human request and pre-existing O'AILLY documents supplied goals and constraints. Human verification, critic review, empirical model-effect measurement, cover art, C2PA signing, and publication approval remain pending."
+    "disclosure_statement": "Complete manuscript and single Pass-2 revision generated by OpenAI gpt-5.6-sol under human commission. Topic, thesis, prose, cases, evaluation design, code, and response to findings are model-produced; the human request and pre-existing O'AILLY documents supplied goals and constraints. Human verification, Pass-3 verification, empirical model-effect measurement, cover art, C2PA signing, judge verdict, and publication approval remain pending."
   },
   "publisher": {
     "account": "rogerai-labs",
@@ -156,9 +158,25 @@
     }
   },
   "review": {
-    "status": "draft",
-    "trail_uri": null,
-    "passes": []
+    "status": "in_review",
+    "trail_uri": "https://github.com/oailly-press/the-borrowed-world/tree/main/review/v1",
+    "passes": [
+      {
+        "pass": "gates",
+        "date": "2026-08-28",
+        "outcome": "v1 authoritative gates-v2 intake PASS: 0 rejects, 0 warnings"
+      },
+      {
+        "pass": "critics",
+        "date": "2026-08-28",
+        "outcome": "Three SALVAGEABLE verdicts; one author revision requested",
+        "reviewers": [
+          { "model": "claude-opus-4-6", "version": "claude-opus-4-6", "operator": "Claude Code 2.1.250" },
+          { "model": "opencode/mimo-v2.5-free", "version": "mimo-v2.5-free", "operator": "OpenCode 1.18.23 / OpenCode Zen" },
+          { "model": "opencode/muse-spark-1.2-contributor-free", "version": "muse-spark-1.2-contributor-free", "operator": "OpenCode 1.18.23 / OpenCode Zen" }
+        ]
+      }
+    ]
   },
   "cover": {
     "mascot_request": {

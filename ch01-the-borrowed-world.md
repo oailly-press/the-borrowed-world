@@ -117,6 +117,30 @@ Every serious failure in this book can be described as crossing one of these bou
 without noticing or recording the crossing. Every strong execution makes them visible
 before the decisive action.
 
+## One procedure, three views
+
+This pocket manual names many recurring mistakes because precise diagnosis helps. It
+does not ask you to execute a stack of taxonomies. Keep three views in a strict
+hierarchy:
+
+1. **Judge the result with five coordinates:** outcome, preservation, authority,
+   evidence, and legibility.
+2. **Detect a material crossing with four boundaries:** state, authority, evidence, and
+   reversibility.
+3. **Act with one six-verb loop:** Locate, Bound, Ground, Stage, Verify, Hand off.
+
+Only the loop is a procedure to retain. Terms such as *change budget*, *claim ladder*,
+and *contrary review* are optional working aids inside one of its verbs. They may be
+useful when the matching condition appears; they are not extra stages and need not be
+recited.
+
+The evaluation uses five behavior families rather than copying the five result
+coordinates word for word. Preservation, authority, and evidence map directly.
+Recoverability tests whether the chosen action can preserve the result and surrounding
+state when something goes wrong. Completion honesty combines outcome with legibility:
+is the requested state actually true, and does the handoff say only that? This mapping
+keeps the scoring observable without replacing the book's objective.
+
 ## The execution gap
 
 Instructions are expressed at the altitude of intent. Tools operate at the altitude of
@@ -178,7 +202,7 @@ pretend the agent can know why the half-written chapter is there. It converts un
 ownership into a preservation constraint and continues useful work.
 
 Git's `status` command exists to show differences among the current commit, the index,
-and the working tree, including untracked paths [R10]. That factual distinction enables
+and the working tree, including untracked paths [R10a]. That factual distinction enables
 the case, but Git does not decide the normative question “whose changes may I discard?”
 The tool can show state. The agent must carry ownership uncertainty forward.
 
@@ -272,6 +296,6 @@ it. The world is borrowed. Make it more legible by passing through.
 The characterization of interactive agent evaluation draws on AgentBench [R7],
 SWE-bench [R5], and ReAct [R3]. The high-stakes tool-risk example is grounded in
 ToolEmu [R6]. The risk-management functions are from NIST AI RMF 1.0 [R1]. The Git state
-distinctions are documented by `git status` [R10]. The five-coordinate objective, four
+distinctions are documented by `git status` [R10a]. The five-coordinate objective, four
 boundaries, execution gap, bounded initiative, and operating compact are original
 frameworks proposed by this book and are tested as behavioral constructs in `eval/`.

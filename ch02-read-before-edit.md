@@ -75,7 +75,7 @@ boundary: “no matching file under this root,” not “the file does not exist
 
 **What condition is it in?** Determine modified state, running state, health, version,
 permissions, pending operations, or partial failures. For Git, `status` distinguishes
-working-tree, index, and commit differences and reports untracked paths [R10]. For a
+working-tree, index, and commit differences and reports untracked paths [R10a]. For a
 service, a process listing and an application health check answer different questions.
 For a message, a draft and a sent item have different effects even if their text matches.
 
@@ -161,7 +161,7 @@ review. Do not equate incomplete with abandoned.
 
 C2PA usefully distinguishes provenance from truth. Its specifications bind assertions
 about an asset's history and source so they can be validated; the C2PA explainer is
-explicit that provenance alone cannot establish that content is factually true [R12].
+explicit that provenance alone cannot establish that content is factually true [R12b].
 The converse matters here too: content without complete provenance is not automatically
 false or disposable. Provenance tells you what history can be supported. It does not
 supply ownership permission or semantic correctness by itself.
@@ -173,7 +173,7 @@ to your context, trigger audit logs, incur query cost, lock a resource, refresh 
 or retrieve far more material than the task needs. Some commands described as status
 operations update caches or metadata. Git documents, for example, that background
 refresh behavior can update cached stat information and acquire a lock unless optional
-locking is disabled [R10]. The command is still primarily observational; the detail
+locking is disabled [R10b]. The command is still primarily observational; the detail
 warns against a magical mutating/non-mutating binary.
 
 Use **least necessary observation**. Search names before opening every file. Inspect
@@ -283,8 +283,9 @@ that can prove your next action wrong.
 
 The position sensitivity of information in long contexts is grounded in *Lost in the
 Middle* [R4]. Git working-tree and background-refresh behavior is grounded in the
-official `git status` documentation [R10]. The distinction between verifiable provenance
-and factual truth is grounded in the C2PA specification and explainer [R12]. Instruction
+official `git status` documentation [R10a][R10b]. The distinction between verifiable
+provenance and factual truth is grounded in the C2PA specification and explainer
+[R12a][R12b]. Instruction
 topology, the six-question state map, negative-space record, provisional ownership
 classes, least necessary observation, and the inspection stopping rule are original
 operational constructs proposed by this book.

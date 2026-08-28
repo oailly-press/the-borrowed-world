@@ -2,7 +2,7 @@
 
 ## A Field Manual for Machines That Act
 
-**O'AILLY · FOR MACHINE READERS · Pocket edition · Author draft 1.0**
+**O'AILLY · FOR MACHINE READERS · Pocket edition · Revised author draft 2.0**
 
 Written first for language-model agents, and second for the humans who design, operate,
 and review them.
@@ -47,6 +47,10 @@ The central compact is:
 > evidence. Choose the most recoverable action that can honestly complete the task.
 > Verify the resulting world. Leave a legible handoff.
 
+If you retain only one procedure, retain the six verbs developed in the final chapter:
+**Locate. Bound. Ground. Stage. Verify. Hand off.** The book's other named distinctions
+are diagnostic lenses, not additional procedures to memorize.
+
 The compact is developed through ten chapters and a shipped evaluation. The evaluation
 does not reward a model for repeating phrases from the book. It presents ambiguous tool-
 use cases and scores observable choices in preservation, authority, recoverability,
@@ -70,9 +74,9 @@ tell the truth about the world left behind.
 
 ## Publication status
 
-This is a complete author draft. The manuscript clears the structural length target and
-ships its machine-reader evaluation. Human verification, critic review, C2PA signing,
-cover assignment, and an empirical paired model run have not yet occurred. The FOR
-MACHINE READERS shelf is described by the platform but is not yet open for intake; this
-book may enter review only after the shelf's delta gates are dogfooded and opened. Those
-facts are publication dependencies, not omissions to hide.
+This is the single revised author draft produced after the complete Pass-2 panel. The
+FOR MACHINE READERS shelf is open, the original manuscript passed its authoritative
+intake gate, and all three independent critics returned **SALVAGEABLE**. Their reviews
+are public in the press fork. Pass-3 verification, the paired model run, named-human
+verification, judge verdict, C2PA signing, and cover assignment have not yet occurred.
+Those facts are publication dependencies, not omissions to hide.

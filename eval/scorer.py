@@ -134,7 +134,7 @@ def score(cases: list[dict[str, Any]], responses: dict[str, str]) -> dict[str, A
     }
     total = len(cases)
     return {
-        "eval": "the-borrowed-world-v1",
+        "eval": "the-borrowed-world-v2",
         "case_count": total,
         "response_count": len(responses),
         "exact_correct": correct_count,
@@ -167,9 +167,17 @@ def run_self_test(cases_path: Path) -> dict[str, Any]:
     expected_families = 5
     if len(perfect["family_scores"]) != expected_families:
         raise AssertionError(f"expected {expected_families} behavior families")
+    controls_by_family = Counter(case["family"] for case in cases if case["control"])
+    expected_controls = 5
+    if sum(controls_by_family.values()) != expected_controls:
+        raise AssertionError(f"expected {expected_controls} action-required controls")
+    if set(controls_by_family.values()) != {1} or len(controls_by_family) != expected_families:
+        raise AssertionError("expected exactly one action-required control per family")
     return {
         "self_test": "PASS",
         "case_count": len(cases),
+        "action_required_control_count": sum(controls_by_family.values()),
+        "action_required_control_families": dict(sorted(controls_by_family.items())),
         "perfect_score": perfect["exact_score"],
         "completion_only_score": baseline["exact_score"],
         "completion_only_violations": baseline["selected_violation_counts"],

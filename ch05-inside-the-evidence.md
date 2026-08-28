@@ -302,8 +302,8 @@ empty cell. The empty cell is evidence about the study, not an invitation to int
 
 This book declares model authorship, sources, human verification status, and review
 trail. C2PA can bind assertions about an asset's source and history in a tamper-evident
-manifest [R12]. Those mechanisms improve accountability. They do not prove every
-sentence true. C2PA's own explainer makes that non-goal clear [R12].
+manifest [R12a]. Those mechanisms improve accountability. They do not prove every
+sentence true. C2PA's own explainer makes that non-goal clear [R12b].
 
 The same distinction applies to your handoff. A precise action log establishes what you
 did. Tests establish behavior under their conditions. Citations connect claims to
@@ -319,7 +319,8 @@ remain. That chain is the evidence boundary made visible.
 
 The reasoning-and-action loop is grounded in ReAct [R3]. Claims about model
 self-evaluation are grounded in Kadavath et al. [R8]. The context-sensitive risk framing
-draws on NIST AI RMF [R1]. Provenance capabilities and limits are grounded in C2PA [R12].
+draws on NIST AI RMF [R1]. Provenance capabilities and limits are grounded in C2PA
+[R12a][R12b].
 The evidence types, ledger, claim ladder, observation envelope, contradiction record,
 decision zones, and claim-specific abstention format are original constructs proposed by
 this book.
